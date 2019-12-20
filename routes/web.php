@@ -12,9 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('admin.templates.default');
+    return view('welcome');
 });
 
-Route::get('/user', function () {
-    return view('admin.user.index');
-});
+Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
