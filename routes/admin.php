@@ -1,5 +1,3 @@
 <?php
 
-Route::get('/', function () {
-    return 'admin Page';
-})->name('dashboard');
+Route::get('/', 'HomeController@index')->name('dashboard');
