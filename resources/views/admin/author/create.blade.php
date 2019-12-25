@@ -2,10 +2,6 @@
 
 @section('content')
     <div class="card">
-        <div class="card-header">
-            <h3>Tambah Data Penulis</h3>
-        </div>
-
         <div class="card-body">
             <form action="{{ route('admin.author.store') }}" method="POST">
                 @csrf
