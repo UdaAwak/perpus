@@ -53,4 +53,7 @@
             })
         })
     </script>
+
+    @include('admin.templates.partials.alerts')
+
 @endpush
