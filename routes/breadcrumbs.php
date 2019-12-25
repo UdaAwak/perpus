@@ -24,3 +24,10 @@ Breadcrumbs::for('admin.author.edit', function ($trail, $author) {
     $trail->push('Penulis', route('admin.author.index'));
     $trail->push('Edit Penulis', route('admin.author.edit', $author));
 });
+
+
+// Book Index
+Breadcrumbs::for('admin.book.index', function ($trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Data Buku', route('admin.book.index'));
+});
