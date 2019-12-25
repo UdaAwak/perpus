@@ -8,7 +8,15 @@
                 @method("PUT")
                 <div class="form-group">
                     <label for="name">Nama</label>
-                    <input type="text" name="name" class="form-control" placeholder="Masukkan Nama Penulis" value="{{ $author->name }}">
+
+                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') ?? $author->name }}" required autocomplete="name" placeholder="Masukkan Nama Penulis" autofocus >
+
+                    @error('name')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Ubah" class="btn btn-primary">

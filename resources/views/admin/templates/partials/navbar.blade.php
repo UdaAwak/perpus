@@ -32,8 +32,8 @@
     
     <li class="nav-item dropdown user-menu">
     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-        <img src="{{ asset('assets//dist/img/user2-160x160.jpg') }}" class="user-image img-circle elevation-2" alt="User Image">
-        <span class="d-none d-md-inline">Alexander Pierce</span>
+        <img src="{{ asset('assets//dist/img/user3-128x128.jpg') }}" class="user-image img-circle elevation-2" alt="User Image">
+        <span class="d-none d-md-inline">{{ auth()->user()->name }}</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
         <!-- User image -->
@@ -41,8 +41,8 @@
         <img src="{{ asset('assets//dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
 
         <p>
-            Alexander Pierce - Web Developer
-            <small>Member since Nov. 2012</small>
+            {{ auth()->user()->name }} - Web Developer
+            <small>Member since Nov. 2019</small>
         </p>
         </li>
         <li class="user-footer">
