@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     {{-- <h3 class="card-title">Data Penulis</h3> --}}
-                    <a href="{{ route('admin.author.create') }}" class="btn btn-primary">Tambah Penulis</a>
+                    <a href="{{ route('admin.book.create') }}" class="btn btn-primary">Tambah Buku</a>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -19,7 +19,7 @@
                         <th>Deskripsi</th>
                         <th>Penulis</th>
                         <th>Sampul</th>
-                        <th>Aksi</th>
+                        <th style="width: 12%">Aksi</th>
                     </tr>
                     </thead>
                     </table>
@@ -41,7 +41,15 @@
 
 @endsection
 
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
+@endpush
+
 @push('scripts')
+
+    <!-- DataTables -->
+    <script src="{{ asset('assets/plugins/datatables/jquery.dataTables.js') }}"></script>
+
     <script>
         $(function () {
             $('#dataTable').DataTable({

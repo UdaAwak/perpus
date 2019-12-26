@@ -16,7 +16,7 @@
                     <tr>
                         <th>Id</th>
                         <th>Nama</th>
-                        <th>Aksi</th>
+                        <th style="width: 15%">Aksi</th>
                     </tr>
                     </thead>
                     </table>
@@ -38,7 +38,14 @@
 
 @endsection
 
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
+@endpush
+
 @push('scripts')
+
+    
+
     <script>
         $(function () {
             $('#dataTable').DataTable({
