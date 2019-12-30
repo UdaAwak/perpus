@@ -24,7 +24,9 @@ class DataController extends Controller
 
     public function books()
     {
-        $books = Book::orderBy('title', 'ASC');
+        $books = Book::orderBy('title', 'ASC')->get();
+
+        $books->load('author');
 
         return datatables()->of($books)
             ->addColumn('author', function (Book $model) {
@@ -41,7 +43,9 @@ class DataController extends Controller
 
     public function borrows()
     {
-        $borrows = BorrowHistory::isBorrowed()->latest();
+        $borrows = BorrowHistory::isBorrowed()->latest()->get();
+
+        $borrows->load('user', 'book');
 
         return datatables()->of($borrows)
             ->addColumn('user', function (BorrowHistory $model) {
