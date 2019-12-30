@@ -5,10 +5,6 @@
         <div class="row">
         <div class="col-12">
             <div class="card">
-                <div class="card-header">
-                    {{-- <h3 class="card-title">Data Penulis</h3> --}}
-                    <a href="{{ route('admin.author.create') }}" class="btn btn-primary">Tambah Penulis</a>
-                </div>
                 <!-- /.card-header -->
                 <div class="card-body">
                     <table id="dataTable" class="table table-bordered table-hover">
@@ -31,10 +27,10 @@
         <!-- /.row -->
     </section>
 
-    <form action="" method="POST" id="deleteForm">
+    <form action="" method="POST" id="returnForm">
         @csrf
-        @method("DELETE")
-        <input type="submit" value="Hapus" style="display: none">
+        @method("PUT")
+        <input type="submit" value="Return" style="display: none">
     </form>
 
 @endsection

@@ -1,5 +1,7 @@
 <?php
 
+use App\BorrowHistory;
+
 Route::get('/', 'HomeController@index')->name('dashboard');
 
 Route::get('/author/data', 'DataController@authors')->name('author.data');
@@ -18,3 +20,4 @@ Route::resource('book', 'BookController'); //mempersingkat route di bawah
 // Route::delete('/author/{author}', 'AuthorController@destroy')->name('author.destroy');
 
 Route::get('borrow', 'BorrowController@index')->name('borrow.index');
+Route::put('borrow/{borrowHistory}/return', 'BorrowController@returnBook')->name('borrow.return');

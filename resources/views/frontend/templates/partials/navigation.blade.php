@@ -9,6 +9,7 @@
                 <li><a href="{{ route('register') }}">Register</a></li>
             @else
                 <li><a href="{{ route('homepage') }}">Home</a></li>
+                <li><a href="{{ route('home') }}">List Pinjam</a></li>
                 <ul id="dropdown1" class="dropdown-content">
                     <li><a href="{{ route('logout') }}"
                         onclick="event.preventDefault();
