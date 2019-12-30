@@ -31,8 +31,14 @@
         </li>
         <li class="nav-item">
         <a href="{{ route('admin.book.index') }}" class="nav-link">
-            <i class="nav-icon fas fa-file"></i>
+            <i class="nav-icon fas fa-book-open"></i>
             <p>Buku</p>
+        </a>
+        </li>
+        <li class="nav-item">
+        <a href="{{ route('admin.borrow.index') }}" class="nav-link">
+            <i class="nav-icon fas fa-book-reader"></i>
+            <p>Buku Sedang Dipinjam</p>
         </a>
         </li>
         <li class="nav-item">
