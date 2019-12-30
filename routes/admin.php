@@ -4,6 +4,7 @@ Route::get('/', 'HomeController@index')->name('dashboard');
 
 Route::get('/author/data', 'DataController@authors')->name('author.data');
 Route::get('/book/data', 'DataController@books')->name('book.data');
+Route::get('/borrow/data', 'DataController@borrows')->name('borrow.data');
 
 
 Route::resource('author', 'AuthorController'); //mempersingkat route di bawah
@@ -15,3 +16,5 @@ Route::resource('book', 'BookController'); //mempersingkat route di bawah
 // Route::get('/author/{author}/edit', 'AuthorController@edit')->name('author.edit');
 // Route::put('/author/{author}', 'AuthorController@update')->name('author.update');
 // Route::delete('/author/{author}', 'AuthorController@destroy')->name('author.destroy');
+
+Route::get('borrow', 'BorrowController@index')->name('borrow.index');
